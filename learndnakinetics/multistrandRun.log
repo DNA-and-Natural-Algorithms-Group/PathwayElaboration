@@ -1,0 +1,15 @@
+Multistrand 2.1 
+ 
+sodium        :  0.195 M 
+magnesium     :  0 M 
+temperature   :  298.15 K
+rate method   :  1           (1: Metropolis, 2: Kawasaki, 3: Arrhenius)
+dangles       :  1           (0: none, 1: some, 2: all)
+GT pairing    :  1           (0: disabled)
+concentration :  1 M 
+
+path_dG      :  /ubc/cs/research/beta/People/nasimzf/PhD/software/multistrand_inference/nupack3.0.4/parameters/dna1998.dG
+path_dH      :  /ubc/cs/research/beta/People/nasimzf/PhD/software/multistrand_inference/nupack3.0.4/parameters/dna1998.dH
+
+unimolecular_scaling :   2.416867e+06 /s 
+bimolecular_scaling  :   8.011714e+05 /M/s 

@@ -1,0 +1,5 @@
+Index,temperature,sodium,magnesium,reaction rate constant,timescale,concentration 1,concentration 2,sequence1,sequence2,sequence3,sequence4,,,,,,,,,,,Mismatch position
+N2-10,23,0.01,,0.562341325,,0.00000001,0.00000001,GTCTAGTGAT,AACACTAGAC,,,,,,,,,,,,,2
+N2-10,23,0.01,,5.064603544,,0.00000001,0.00000001,GTCTAGTGAT,ATGACTAGAC,,,,,,,,,,,,,3
+N2-10,23,0.01,,5.336699231,,0.00000001,0.00000001,GTCTAGTGAT,ATCTCTAGAC,,,,,,,,,,,,,4
+N2-10,23,0.01,,3.332170941,,0.00000001,0.00000001,GTCTAGTGAT,ATCAGTAGAC,,,,,,,,,,,,,5
