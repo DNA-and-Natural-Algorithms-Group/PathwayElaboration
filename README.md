@@ -67,7 +67,7 @@ To use pathway elaboration with the dataset provided:
 - In ' learndnakinetics/config_file.txt ': 
 - Set *n_processors* to be the number of processors for multiprocessing the computation of the objective function. Set *use_multiprocess =1* to multiprocesses the computations (each reaction will use a distinct processor). Set *use_multiprocess=0* to turnoff multiprocessing. 
   - Set *rate_method=1* to use the Metropolis kinetic model. Set *rate_method=3* to use the Arrhenius kinetic model. 
-  - Set *parameter_folder* to be the path to a directory to save results. In this folder, the MSE of the parameters over the entire reactions of the dataset is logged. In addition, the parameter set of each iteration of the optimization will be logged. Also, the  fixed paths in FPEI will be saved.   
+  - Set *parameter_folder* to be the path to a directory to save results. 
   - Set  *do_inference=1* to run parameter estimation. Set *do_inference=0* to turn off parameter estimation. 
   - Set  *use_regularizer=1* to use a  regularizer (for parameter estimation). 
   - Set *filter_smallandlarge_rates=1* to filter parameters that are really slow or high.  (See code in learndnakinetics.py for values)
@@ -84,13 +84,6 @@ To use pathway elaboration with the dataset provided:
  - Run  ' learndnakinetics/map.py '. 
  
   If you have successfully installaled this software,  you will get a message such as "Starting to estimate parameters for the Arrhenius kinetic model". 
-
-To plot the results, similar to Fig. 5 from [1], from parameter estimation using FPEI vs SSAI: 
- - in ' plot/plot_ssavsftei.py '
-   - Provide the path to the *parameter_folder* directory that the FPEI results are saved.
-   - Provide the path to the *parameter_folder* direcotory that the SSAI results are saved.
- - Run ' plot/plot_ssavsftei.py '
- 
 
 # References 
 
