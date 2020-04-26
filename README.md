@@ -41,8 +41,8 @@ For linux:
   - Set the  PYTHONPATH evironment variable to point to the multistrand_modified  directory. For example, in openSUSE, you can use the following command: ' export PYTHONPATH="${PYTHONPATH}:path/to/multistrand_modified" '.  
 
 For efficiently solving system of linear equations: 
-- Install scikits.umfpack.  
-- Turn of multithreading for the matrix solvers as follows: 
+- Don't forget to install scikits.umfpack.  
+- And turn of multithreading for the matrix solvers as follows: 
   - export MKL_NUM_THREADS=1
   - export NUMEXPR_NUM_THREADS=1
   - export OMP_NUM_THREADS=1
