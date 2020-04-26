@@ -585,6 +585,9 @@ def set_configuration():
 	num_simulations_Gillespie= int (configParser.getint(CONFIG_NAME, 'num_simulations_Gillespie'))
 	simulation_time_Gillespie=  float (configParser.getfloat(CONFIG_NAME, 'simulation_time_Gillespie'))
 
+
+	print "Using pathway elaboration to predict the kinetics of nucleic acid kinetics ... "
+	
 	if do_inference == True:
 		if rate_method == 1 :
 			print "\nStarting to estimate parameters for the Metropolis kinetic model"
