@@ -10,7 +10,8 @@ Please contact us at nasimzf@cs.ubc.ca for questions regarding the software.
 
 Disclaimer: This software is free for use only for research purposes. If you make use of this software, please cite our paper
 
-[1] Zolaktaf, Sedigheh, Frits Dannenberg, Erik Winfree, Alexandre Bouchard-Côté, Mark Schmidt, and Anne Condon. "Efficient Parameter Estimation for DNA Kinetics Modeled as Continuous-Time Markov Chains." In International Conference on DNA Computing and Molecular Programming, pp. 80-99. Springer, Cham, 2019.
+[1]  Sedigheh Zolaktaf, Frits Dannenberg, Mark Schmidt, Anne Condon, and Erik Winfree, The Pathway Elaboration Method for Mean First Passage Time Estimation in Large Continuous-Time Markov Chains with Applications to Nucleic Acid Kinetics, under review.
+
 # Requirements 
 
 | Dependency       | Notes          
