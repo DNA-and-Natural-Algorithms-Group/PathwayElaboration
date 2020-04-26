@@ -1,6 +1,6 @@
 # Introduction
 
-This software implements  the patway elaboration method for (multiple) interacting nucleic acid strands using the  Multistrand nucleic acid kinetic simulator [2]. It could be used for estimating the mean first passage time estimation (MFPT) (and reaction rate constant) of rare events and the rapid evaluation of perturbed parameters and conditions. 
+This software implements  the patway elaboration method for (multiple) interacting nucleic acid strands using the  Multistrand simulator [2]. It could be used for estimating the mean first passage time estimation (MFPT) (and reaction rate constant) of rare events and the rapid evaluation of perturbed parameters. 
  
  This software uses and modifies code from the <a href="https://github.com/DNA-and-Natural-Algorithms-Group/multistrand">Multistrand repository</a> [2]. 
 
@@ -21,7 +21,7 @@ Disclaimer: This software is free for use only for research purposes. If you mak
 |make|4.0+ | 
 |<a href="http://www.nupack.org/">NUPACK</a> |3.2.1| 
 |Multistrand|We have modified <a href="https://github.com/DNA-and-Natural-Algorithms-Group/multistrand">Multistrand</a>.  For this project,     <br />  use  the   modified version  provided in this directory| 
-|numpy|1.9.3+| 
+|numpy|1.16.2+| 
 |SciPy | 1.2.0+ |
 |scikits.umfpack|0.3.2+|
 | enum34 | 1.1.6+ | 
