@@ -36,9 +36,16 @@ For linux:
 - Set the system environment variables to point NUPACKHOME to the folder where NUPACK is installed. For example, in openSUSE, you can run : ' export NUPACKHOME=path/to/NUPACK3.0.4 '. To verify that the NUPACKHOME is correctly set, run ' echo $NUPACKHOME '. 
 - Clone our software directory into your workspace. 
 - In the  multistrand_modified directory,
-  - Build Multistrand by running ' make clean ' and then ' make '. Upon successful  building of  Multistrand you should get a message such as "Multistrand is now built. ... ".
+  - Build Multistrand by running ' make clean ' and then ' make '. Upon successful  building of  Multistrand you should get a message  "Multistrand is now built. ... ".
   - Export  Multistrand as a Python library by running  ' make install '. 
   - Set the  PYTHONPATH evironment variable to point to the multistrand_modified  directory. For example, in openSUSE, you can use the following command: ' export PYTHONPATH="${PYTHONPATH}:path/to/multistrand_modified" '.  
+
+For efficiently solving system of linear equations: 
+- Install scikits.umfpack.  
+- Turn of multithreading for the matrix solvers as follows: 
+ - export MKL_NUM_THREADS=1
+ - export NUMEXPR_NUM_THREADS=1
+ - export OMP_NUM_THREADS=1
 
   Note that this software only works with the modified Multistrand code provided here, and will not work with the original version of Multistrand.
 
