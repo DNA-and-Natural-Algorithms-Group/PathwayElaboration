@@ -85,11 +85,14 @@ To plot the results, similar to Fig. 5 from [1], from parameter estimation using
 
 [1]  Sedigheh Zolaktaf*, Frits Dannenberg*, Mark Schmidt, Anne Condon, and Erik Winfree, The Pathway Elaboration Method for Mean First Passage Time Estimation in Large Continuous-Time Markov Chains with Applications to Nucleic Acid Kinetics, under review.
 
+[2] Schaeffer JM, Thachuk C, Winfree E. Stochastic simulation of the kinetics of multiple interacting nucleic acid strands. InInternational Workshop on DNA-Based Computers 2015 Aug 17 (pp. 194-211). Springer, Cham.
 
-[2] Schaeffer, J.M., Thachuk, C., Winfree, E.: Stochastic simulation of the kinetics of multiple interacting nucleic acid strands. In: Proceedings of the 21st International Conference on DNA Computing and Molecular Programming-Volume 9211 (2015)
+[3] Bonnet G, Krichevsky O, Libchaber A. Kinetics of conformational fluctuations in DNA hairpin-loops. Proceedings of the National Academy of Sciences. 1998 Jul 21;95(15):8602-6.
+ 
+[4] Cisse II, Kim H, Ha T. A rule of seven in Watson-Crick base-pairing of mismatched sequences. Nature structural & molecular biology. 2012 Jun;19(6):623.
+ 
+[5] Hata H, Kitajima T, Suyama A. Influence of thermodynamically unfavorable secondary structures on DNA hybridization kinetics. Nucleic acids research. 2018 Jan 25;46(2):782-91.
 
- [3]  Bonnet, Grégoire, Oleg Krichevsky, and Albert Libchaber. "Kinetics of conformational fluctuations in DNA hairpin-loops." Proceedings of the National Academy of Sciences 95.15 (1998): 8602-8606.
- 
- [4] Cisse, Ibrahim I., Hajin Kim, and Taekjip Ha. "A rule of seven in Watson-Crick base-pairing of mismatched sequences." Nature structural & molecular biology 19.6 (2012): 623.
- 
-  [5] Hata, Hiroaki, Tetsuro Kitajima, and Akira Suyama. "Influence of thermodynamically unfavorable secondary structures on DNA hybridization kinetics." Nucleic Acids Research (2017).
+[6] Machinek RR, Ouldridge TE, Haley NE, Bath J, Turberfield AJ. Programmable energy landscapes for kinetic control of DNA strand displacement. Nature communications. 2014 Nov 10;5(1):1-9.
+
+[7] Zhang JX, Fang JZ, Duan W, Wu LR, Zhang AW, Dalchau N, Yordanov B, Petersen R, Phillips A, Zhang DY. Predicting DNA hybridization kinetics from sequence. Nature chemistry. 2018 Jan;10(1):91-8.
