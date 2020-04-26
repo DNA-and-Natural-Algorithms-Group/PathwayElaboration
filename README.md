@@ -1,13 +1,10 @@
 # Introduction
 
-This software implements  the following two algorithms [1] for estimating parameters for nucleic acid reactions in the full state space of the Multistrand nucleic acid kinetic simulator [2]. 
+This software implements  the patway elaboration method for the prediction of rare events and the rapid evaluation of perturbed parameters and conditions,  in the full state space of the Multistrand nucleic acid kinetic simulator [2]. 
  
-- The Fixed Pathway Ensemble Inference (FPEI).
-- The Stochastic Simulation Algrorithm Inference (SSAI).
-
  This software uses and modifies code from the <a href="https://github.com/DNA-and-Natural-Algorithms-Group/multistrand">Multistrand repository</a> [2]. 
 
-For more information regarding the methods employed in our software, see our paper [1] (to appear). 
+For more information regarding the methods employed in our software, see our paper [1] (under review). 
 
 Please contact us at nasimzf@cs.ubc.ca for questions regarding the software.
 
@@ -76,7 +73,8 @@ To plot the results, similar to Fig. 5 from [1], from parameter estimation using
 
 # References 
 
-[1] Zolaktaf, Sedigheh, Frits Dannenberg, Erik Winfree, Alexandre Bouchard-Côté, Mark Schmidt, and Anne Condon. "Efficient Parameter Estimation for DNA Kinetics Modeled as Continuous-Time Markov Chains." In International Conference on DNA Computing and Molecular Programming, pp. 80-99. Springer, Cham, 2019.
+[1]  Sedigheh Zolaktaf, Frits Dannenberg, Mark Schmidt, Anne Condon, and Erik Winfree, The Pathway Elaboration Method for Mean First Passage Time Estimation in Large Continuous-Time Markov Chains with Applications to Nucleic Acid Kinetics, under review.
+
 
 [2] Schaeffer, J.M., Thachuk, C., Winfree, E.: Stochastic simulation of the kinetics of multiple interacting nucleic acid strands. In: Proceedings of the 21st International Conference on DNA Computing and Molecular Programming-Volume 9211 (2015)
 
