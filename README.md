@@ -43,9 +43,9 @@ For linux:
 For efficiently solving system of linear equations: 
 - Install scikits.umfpack.  
 - Turn of multithreading for the matrix solvers as follows: 
- - export MKL_NUM_THREADS=1
- - export NUMEXPR_NUM_THREADS=1
- - export OMP_NUM_THREADS=1
+  - export MKL_NUM_THREADS=1
+  - export NUMEXPR_NUM_THREADS=1
+  - export OMP_NUM_THREADS=1
 
   Note that this software only works with the modified Multistrand code provided here, and will not work with the original version of Multistrand.
 
