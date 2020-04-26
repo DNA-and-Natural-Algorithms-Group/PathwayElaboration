@@ -21,11 +21,11 @@ Disclaimer: This software is free for use only for research purposes. If you mak
 |<a href="http://www.nupack.org/">NUPACK</a> |3.2.1| 
 |Multistrand|We have modified <a href="https://github.com/DNA-and-Natural-Algorithms-Group/multistrand">Multistrand</a>.  For this project,     <br />  use  the   modified version  provided in this directory| 
 |numpy|1.9.3+| 
-|SciPy | 1.1.0+ |
+|SciPy | 1.2.0+ |
+|scikits.umfpack|0.3.2+|
 | enum34 | 1.1.6+ | 
 | ConfigParser | 3.5.0+ | 
-|matplotlib| 2.0.0+|
-|seaborn|0.7.1+|
+|matplotlib| 2.0.2+|
 
 
 
