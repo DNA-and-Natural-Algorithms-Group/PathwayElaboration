@@ -10,7 +10,7 @@ Please contact us at nasimzf@cs.ubc.ca for questions regarding the software.
 
 Disclaimer: This software is free for use only for research purposes. If you make use of this software, please cite our paper
 
-[1]  Sedigheh Zolaktaf, Frits Dannenberg, Mark Schmidt, Anne Condon, and Erik Winfree, The Pathway Elaboration Method for Mean First Passage Time Estimation in Large Continuous-Time Markov Chains with Applications to Nucleic Acid Kinetics, under review.
+[1]  Sedigheh Zolaktaf*, Frits Dannenberg*, Mark Schmidt, Anne Condon, and Erik Winfree, The Pathway Elaboration Method for Mean First Passage Time Estimation in Large Continuous-Time Markov Chains with Applications to Nucleic Acid Kinetics, under review.
 
 # Requirements 
 
@@ -74,7 +74,7 @@ To plot the results, similar to Fig. 5 from [1], from parameter estimation using
 
 # References 
 
-[1]  Sedigheh Zolaktaf, Frits Dannenberg, Mark Schmidt, Anne Condon, and Erik Winfree, The Pathway Elaboration Method for Mean First Passage Time Estimation in Large Continuous-Time Markov Chains with Applications to Nucleic Acid Kinetics, under review.
+[1]  Sedigheh Zolaktaf*, Frits Dannenberg*, Mark Schmidt, Anne Condon, and Erik Winfree, The Pathway Elaboration Method for Mean First Passage Time Estimation in Large Continuous-Time Markov Chains with Applications to Nucleic Acid Kinetics, under review.
 
 
 [2] Schaeffer, J.M., Thachuk, C., Winfree, E.: Stochastic simulation of the kinetics of multiple interacting nucleic acid strands. In: Proceedings of the 21st International Conference on DNA Computing and Molecular Programming-Volume 9211 (2015)
