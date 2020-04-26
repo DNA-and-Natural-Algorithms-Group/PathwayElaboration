@@ -1,6 +1,6 @@
 # Introduction
 
-This software implements  the patway elaboration method for the prediction of rare events and the rapid evaluation of perturbed parameters and conditions,  in the full state space of the Multistrand nucleic acid kinetic simulator [2]. 
+This software implements  the patway elaboration method for (multiple) interacting nucleic acid strands using the  Multistrand nucleic acid kinetic simulator [2]. It could be used for esimating the mean first passage time estimation (MFPT) (and reaction rate constant) of rare events and the rapid evaluation of perturbed parameters and conditions. 
  
  This software uses and modifies code from the <a href="https://github.com/DNA-and-Natural-Algorithms-Group/multistrand">Multistrand repository</a> [2]. 
 
