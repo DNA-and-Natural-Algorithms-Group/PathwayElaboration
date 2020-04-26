@@ -52,17 +52,18 @@ For efficiently solving system of linear equations:
  
 
 # Package Tree
-This software contains 5  directories, namely, multistrand_modified, learndnakinetics, reactions, dataset, plot. 
-- learndnakinetics:  this  directory contains code to run the FPEI and SSAI parameter estimation algorithms on the following dataset. 
+This software contains 4  directories, namely, learndnakinetics, reactions, dataset, and multistrand_modified. 
+- learndnakinetics and reactions:  these directories contain code to run the pathway elaboration method. 
 - dataset: this directory contains reaction rate constants and timescales that we compiled from published literature
-  - hairpin_bonnet98: reactions 1-10 in Table 1 from [1]. These reactions are originally from [3]. 
-  - helix4_cisse2012: reactions 11-15 in Table 1 from [1]. These reactions are originally from  [4].
-  - helix2_hata2017: reactions 16-19  in Table 1 from [1]. These reactions are originally from  [5]. 
+  - hairpin_bonnet1998:  These reactions are originally from [3]. 
+  - helix4_cisse2012: These reactions are originally from  [4].
+  - helix2_hata2017: These reactions are originally from  [5]. 
+  - threeway_stranddisplacement2_machinek2014: Threse reaction are originally from [6].
 - multistrand_modfied: The modified Multistrand code adapted from the branch 'fdann-devel' from  <a href="https://github.com/DNA-and-Natural-Algorithms-Group/multistrand">  Multistrand repository</a> [2]. 
-- plot: contains code to plot the results from parameter estimation, similar to Fig. 5 from [1].  
+
 
 # Software Usage 
-To use FPEI or SSAI with the dataset provided:
+To use pathway elaboration with the dataset provided:
 - In ' learndnakinetics/config_file.txt ': 
   - Set *use_FPEI_MFPT = 1* and *use_Gillespie_MFPT=0* to use FPEI. Set *use_FPEI_MFPT = 0* and *use_Gillespie_MFPT=1* to use SSAI. 
   - Set *rate_method = 3* to estimate parameters for the  Arrhenius kinetic model. Set *rate_method = 1* to estimate parameters for the Metropolis kinetic model. 
