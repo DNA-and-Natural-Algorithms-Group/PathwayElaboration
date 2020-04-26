@@ -72,7 +72,12 @@ To use pathway elaboration with the dataset provided:
   - Set  *use_regularizer=1* to use a  regularizer (for parameter estimation). 
   - Set *filter_smallandlarge_rates=1* to filter parameters that are really slow or high.  (See code in learndnakinetics.py for values)
   - Set *load_existing_override=1* to reuse truncated CTMCs (if it exists) instead of building from scratch. 
-  - Set
+  - Set *deltaPruning=1* to do delta-pruning.  (See code in parent.py and learndnaknietics.py to change functionality)
+  - Set *pathwayelaboration_N*  corresponds to N in the pathway elaboration method [1]. 
+  - Set *pathwayelaboration_beta* corresponds to beta in the pathway elaboration method [1] 
+  - Set *pathwayelaboration_K* Corresponds to K in the pathwaye elaboration method [1]. 
+  - Set *pathwayelaboration_beta* Corresponds to beta in the pathwaye elaboration method [1]. 
+  - Set *pathwayelaboration_use_elaboration=1* to include the elaboration step [1]. 
   
  - In ' map.py ': 
    - Set the initial parameter set. 
