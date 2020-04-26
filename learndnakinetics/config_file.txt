@@ -17,7 +17,7 @@ load_existing_override=0
 #if do_inference =0 and load_existing_override=1, then will reuse existing truncated CTMC (if it exists)  instead of building from scratch
 deltaPruning = 1
 # if do_inference =1 and  deltaPruning =1 only do deltapruning when matrix matrix solve time is grater than maxsolvetime and override current truncated CTMC.  if do_inference =0 and  deltaPruning =1 do deltapruning for the values specified (in parent.py change the functionality as you want).
-pathwayelaboration_N =1
+pathwayelaboration_N =20
 # number of paths for initial pathway 
 pathwayelaboration_beta= 0.2
 #0 <= pathwayelaboration_beta  < 1, if you put  pathwayelaboration_beta = 0 , then misaligned base pairs will not be allowed in initial random pathways. 
