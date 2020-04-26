@@ -65,10 +65,15 @@ This software contains 4  directories, namely, learndnakinetics, reactions, data
 # Software Usage 
 To use pathway elaboration with the dataset provided:
 - In ' learndnakinetics/config_file.txt ': 
-  - Set *use_FPEI_MFPT = 1* and *use_Gillespie_MFPT=0* to use FPEI. Set *use_FPEI_MFPT = 0* and *use_Gillespie_MFPT=1* to use SSAI. 
-  - Set *rate_method = 3* to estimate parameters for the  Arrhenius kinetic model. Set *rate_method = 1* to estimate parameters for the Metropolis kinetic model. 
+- Set *n_processors* to be the number of processors for multiprocessing the computation of the objective function. Set *use_multiprocess =1* to multiprocesses the computations (each reaction will use a distinct processor). Set *use_multiprocess=0* to turnoff multiprocessing. 
+  - Set *rate_method=1* to use the Metropolis kinetic model. Set *rate_method=3* to use the Arrhenius kinetic model. 
   - Set *parameter_folder* to be the path to a directory to save results. In this folder, the MSE of the parameters over the entire reactions of the dataset is logged. In addition, the parameter set of each iteration of the optimization will be logged. Also, the  fixed paths in FPEI will be saved.   
-  - Set *n_processors* to be the number of processors for multiprocessing the computation of the objective function. Set *use_multiprocess =1* to multiprocess the computations. 
+  - Set  *do_inference=1* to run parameter estimation. Set *do_inference=0* to turn off parameter estimation. 
+  - Set  *use_regularizer=1* to use a  regularizer (for parameter estimation). 
+  - Set *filter_smallandlarge_rates=1* to filter parameters that are really slow or high.  (See code in learndnakinetics.py for values)
+  - Set *load_existing_override=1* to reuse truncated CTMCs (if it exists) instead of building from scratch. 
+  - Set
+  
  - In ' map.py ': 
    - Set the initial parameter set. 
  - Run  ' learndnakinetics/map.py '. 
