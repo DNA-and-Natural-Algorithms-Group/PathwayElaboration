@@ -40,6 +40,7 @@ For linux:
   - Export  Multistrand as a Python library by running  ' make install '. 
   - Set the  PYTHONPATH evironment variable to point to the multistrand_modified  directory. For example, in openSUSE, you can use the following command: ' export PYTHONPATH="${PYTHONPATH}:path/to/multistrand_modified" '.  
 
+Note that this software only works with the modified Multistrand code provided here, and will not work with the original version of Multistrand.
 For efficiently solving system of linear equations: 
 - Don't forget to install scikits.umfpack.  
 - And turn of multithreading for the matrix solvers as follows: 
@@ -47,7 +48,7 @@ For efficiently solving system of linear equations:
   - export NUMEXPR_NUM_THREADS=1
   - export OMP_NUM_THREADS=1
 
-  Note that this software only works with the modified Multistrand code provided here, and will not work with the original version of Multistrand.
+ 
 
 # Package Tree
 This software contains 5  directories, namely, multistrand_modified, learndnakinetics, reactions, dataset, plot. 
