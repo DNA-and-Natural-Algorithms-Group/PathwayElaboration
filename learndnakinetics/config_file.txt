@@ -31,7 +31,6 @@ simulation_time_Gillespie=  10000.1
 #if you are estimate MFPT with Gillespie SSA, set simultaion_time_Gillspie 
 
 [parent]
-NUPACK_bin =  /ubc/cs/research/beta/People/nasimzf/PhD/software/nupack/bin/
 build_truncatedCTMC = 1
 # build_truncatedCTMC = 1 will estimate the MFPT by build a truncated CTMC 
 build_truncatedCTMC_pathwayelaboration = 1 

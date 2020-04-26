@@ -23,7 +23,6 @@ from subprocess import Popen, PIPE, call
 configParser = ConfigParser.ConfigParser()
 configParser.readfp(open(r'../learndnakinetics/config_file.txt'))
 CONFIG_NAME = 'parent'
-NUPACK_bin= configParser.get(CONFIG_NAME, 'NUPACK_bin')
 build_truncatedCTMC= bool(configParser.getint(CONFIG_NAME, 'build_truncatedCTMC'))
 build_truncatedCTMC_pathwayelaboration = bool(configParser.getint(CONFIG_NAME,'build_truncatedCTMC_pathwayelaboration'))
 build_truncatedCTMC_GillespieSSA= bool(configParser.getint(CONFIG_NAME, 'build_truncatedCTMC_GillespieSSA'))
