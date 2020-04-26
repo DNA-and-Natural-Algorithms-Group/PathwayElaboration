@@ -1,0 +1,2 @@
+Table1 is helix association from Table 1 of Hata H, Kitajima T, Suyama A. Influence of thermodynamically unfavorable secondary structures on DNA hybridization kinetics. Nucleic acids research. 2018 Jan 25;46(2):782-91.
+
