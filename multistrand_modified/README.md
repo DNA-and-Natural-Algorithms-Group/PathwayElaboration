@@ -1,1 +1,1 @@
-This software has been modified, and is only usable in the FPEI project. For the original Multistrand software use the <a href="https://github.com/DNA-and-Natural-Algorithms-Group/multistrand">Multistrand repository</a>. 
+This software has been modified, and is only usable in this project (PathwayElaboration). For the original Multistrand software use the <a href="https://github.com/DNA-and-Natural-Algorithms-Group/multistrand">Multistrand repository</a>. 
