@@ -7,7 +7,7 @@ import os
 import multiprocessing
 import sys
 import math
-sys.path.insert(0,os.path.realpath('../reactions'))
+sys.path.insert(0,os.path.realpath('reactions'))
 import parent
 from parent import *
 from datasets import *
@@ -154,54 +154,11 @@ def read_dataset( done_queue ,  dataset ) :
 			pass
 			#print "no more strings to read"
 	
-	if dataset.dataset_name == myenums.DatasetName.RAUZAN2013.value:
-		strands_list = [strands_list[0], strands_list[1][::-1] ]
-	
-	if dataset.dataset_name == myenums.DatasetName.DUPIUS2013.value:
-		strand1= strands_list[0 ][len(strands_list[0] )- len(strands_list[2]):]
-		strand2= strands_list[2]
-		botleftdangle= strands_list[3]
-		topleftdangle = strands_list[0][0: len(strands_list[0] )- len(strands_list[2])]
-		strands_list = [strand1,strand2 , botleftdangle, topleftdangle ]
-	
-	if dataset.dataset_name == myenums.DatasetName.REYNALDODISSOCIATE.value  or dataset.dataset_name == myenums.DatasetName.REYNALDOSEQUENTIAL.value :
-		strand1 = strands_list[1]
-		strand2 = Complement(strand1)
-		dangle = strands_list[2]
-		botleftdangle = "GAA"
-		botrightdangle = dangle[len(botleftdangle) + len(strand1):   ]
-		strands_list= [strand1 ,strand2,  botleftdangle, botrightdangle ]
-		toehold_length =  0
 	if dataset.dataset_name == myenums.DatasetName.SUYAMA.value or dataset.dataset_name == myenums.DatasetName.ZHANG_hybridization.value :
 		strand1 = strands_list[0 ]
 		strand2 = Complement(strand1)
 		strands_list= [strand1 ,strand2]
 	
-	if dataset.dataset_name ==myenums.DatasetName.ZHANG.value:
-		toehold_length =  int( dataset.row[dataset.counter_cell][toeholdlength_column [0]]   )
-		toehold= strands_list[2][:toehold_length]
-		displacement  = strands_list[1]
-		topdangle= strands_list[0]
-		strands_list= [toehold, displacement,  topdangle]
-	
-	if dataset.dataset_name ==myenums.DatasetName.ZHANG_stranddisplacement.value:
-		toehold_length =  len (strands_list[1] )  -  len(strands_list[0])
-		attacker = strands_list[1] #target
-		substrate   = Complement( strands_list[1])
-		incumbent = attacker[  : len(attacker) - toehold_length  ]
-		strands_list= [attacker, substrate, incumbent]
-	
-	if dataset.dataset_name ==myenums.DatasetName.BROADWATER2016.value:
-		incumbent = strands_list[0][::-1]
-		attacker=strands_list[1][::-1]
-		substrate = strands_list[2][::-1]
-		strands_list= [attacker, substrate, incumbent]
-	
-	if dataset.dataset_name ==myenums.DatasetName.SHERRYCHEN2016.value:
-		incumbent = strands_list[0]
-		attacker=strands_list[1]
-		substrate = strands_list[2][::-1]
-		strands_list= [attacker, substrate, incumbent]
 	
 	if dataset.dataset_name ==myenums.DatasetName.MACHINEK.value:
 		toehold_length =  int( dataset.row[dataset.counter_cell][toeholdlength_column [0]]   )
@@ -214,68 +171,7 @@ def read_dataset( done_queue ,  dataset ) :
 		substrateDangle = targetMachinek[0: aa]
 		strands_list = [incumbentDangle, incumbent, substrateDangle,  substrate, attacker]
 	
-	if dataset.dataset_name == myenums.DatasetName.DABBY.value:
-		
-		bimolecular_rate = real_rate
-		unimolecular_rate =  float(dataset.row [dataset.counter_cell][rate_column[1]])
-		t1 = 1 / (bimolecular_rate * concentration)
-		t2 = 1 /unimolecular_rate
-		real_rate = 1 / ((t1 + t2) * concentration)
-		Xstr = strands_list[0]
-		toeholdstrm = strands_list[1]
-		toeholdstrn = strands_list[2]
-		lenm =  int( dataset.row[dataset.counter_cell][toeholdlength_column [0]]   )
-		lenn =  int( dataset.row[dataset.counter_cell][toeholdlength_column [1]]   )
-		ms = int  ( dataset.row[dataset.counter_cell][to_column[0]] )
-		ns = int (dataset.row[dataset.counter_cell][to_column[1]] )
-		complex1  = toeholdstrm[len(toeholdstrm)- lenm: ] + Xstr
-		FullToehold = toeholdstrm[len(toeholdstrm)- ms : ] + Xstr
-		reporter1  = Complement(FullToehold)
-		complex2 = Complement ( Xstr) + toeholdstrn[ :lenn ]
-		FullToehold = Complement(Xstr ) + toeholdstrn[ :  ns  ]
-		reporter2 = Complement(FullToehold)
-		strands_list = [complex1, reporter1, complex2, reporter2 ]
-		lenx = len(Xstr)
-		dataset.set_specific  ( lenx= lenx, lenm= lenm, lenn = lenn , ms = ms , ns = ns  )
-	
-	if dataset.dataset_name == myenums.DatasetName.GROVES2015.value:
-		Xstr = strands_list[0]
-		toeholdstrm = strands_list[1]
-		toeholdstrn = strands_list[2]
-		lenm =  int( dataset.row[dataset.counter_cell][toeholdlength_column [0]]   )
-		lenn =  int( dataset.row[dataset.counter_cell][toeholdlength_column [1]]   )
-		ms =lenm
-		ns = lenn
-		complex1  = toeholdstrm[len(toeholdstrm)- lenm: ] + Xstr
-		FullToehold = toeholdstrm[len(toeholdstrm)- ms : ] + Xstr
-		reporter1  = Complement(FullToehold)
-		complex2 = Complement ( Xstr) + toeholdstrn[ :lenn ]
-		FullToehold = Complement(Xstr ) + toeholdstrn[ :  ns  ]
-		reporter2 = Complement(FullToehold)
-		strands_list = [complex1, reporter1, complex2, reporter2 ]
-		lenx = len(Xstr)
-		dataset.set_specific  ( lenx= lenx, lenm= lenm, lenn = lenn , ms = ms , ns = ns  )
-	
-	if dataset.dataset_name == myenums.DatasetName.ALTANBONNET.value :
-		flur_position= 17 	#set flur position for Altan - bonnet !
-		dataset.set_specific(flur_position =flur_position)
-	
-	
-	if dataset.dataset_name == myenums.DatasetName.GAO2006.value:
-		if dataset.counter_cell == 3 or dataset.counter_cell == 7 or dataset.counter_cell ==  11:
-			
-			dataset.set_specific(dataset_type = myenums.DatasetType.MISMATCH.value)
-		
-		else:
-			dataset.set_specific(dataset_type = myenums.DatasetType.NODANGLE.value)
-	
 	dataset.set_specific(cutoff =1 )
-	if 1<= dataset.counter_cell <= 5 and dataset.dataset_name == myenums.DatasetName.GROVES2015.value:
-		dataset.set_specific(loopbases=4)
-	elif 10<= dataset.counter_cell <= 12 and dataset.dataset_name == myenums.DatasetName.GROVES2015.value:
-		dataset.set_specific(loopbases=8)
-	elif dataset.dataset_name == myenums.DatasetName.GROVES2015.value or dataset.dataset_name == myenums.DatasetName.DABBY.value  :
-		dataset.set_specific(loopbases= 6)
 	
 	dataset.set_specific(  temperature =  temperature , concentration =concentration, sodium = sodium, magnesium =  magnesium,  real_rate = real_rate, strands_list = strands_list, toehold_length = toehold_length, flur_position = flur_position)
 	complex = ParentComplex(dataset)
@@ -403,9 +299,9 @@ def objective_function(theta_simulationp ):
 	dataset_list = []
 	directories =[]
 	
-	(dataset_list, done_queue, n ) =  read_Hata2017 (done_queue  =done_queue,dataset_list =dataset_list, n = n,  directories = directories )
-	(dataset_list, done_queue, n ) =  read_Cisse2012(done_queue  =done_queue,dataset_list =dataset_list, n = n,  directories = directories )
-	(dataset_list, done_queue, n ) =  read_Machinek2014(done_queue  =done_queue,dataset_list =dataset_list, n = n,  directories = directories )
+	#(dataset_list, done_queue, n ) =  read_Hata2017 (done_queue  =done_queue,dataset_list =dataset_list, n = n,  directories = directories )
+	#(dataset_list, done_queue, n ) =  read_Cisse2012(done_queue  =done_queue,dataset_list =dataset_list, n = n,  directories = directories )
+	#(dataset_list, done_queue, n ) =  read_Machinek2014(done_queue  =done_queue,dataset_list =dataset_list, n = n,  directories = directories )
 	(dataset_list, done_queue, n ) =  read_Bonnet1998(done_queue  =done_queue,dataset_list =dataset_list, n = n,  directories = directories )
 	# dataset not released (dataset_list, done_queue, n ) =  read_Zhang2018_hybridization(done_queue  =done_queue,dataset_list =dataset_list, n = n,  directories = directories )
 	
@@ -418,26 +314,28 @@ def objective_function(theta_simulationp ):
 	terror   = multi_process(done_queue , dataset_list   , iter , dataset_error , dataset_count   )
 	error += terror
 
-	regularizer = 0
-	if rate_method == Literals.arrhenius :
-		for i in range( len(theta_simulation) ) :
-			regularizer+=  (theta_simulation[i] * theta_simulation [i] )
-	elif rate_method == Literals.metropolis:
-		for i in range(0, 2 ) :
-			param = math.log (theta_simulation[i] )
-			regularizer += (  param * param )
-		for i in range( 2, len(theta_simulation) ):
-			regularizer += (theta_simulation[i] * theta_simulation[i] )
 	
-	else:
-		raise ValueError('Error: Specify rate_method to be Arrhenius or Metropolis!')
-	LAMBDA =50
-	regularizer = regularizer/ (2 * LAMBDA)
 	if use_regularizer== True:
+		regularizer = 0
+		if rate_method == Literals.arrhenius :
+			for i in range( len(theta_simulation) ) :
+				regularizer+=  (theta_simulation[i] * theta_simulation [i] )
+		elif rate_method == Literals.metropolis:
+			for i in range(0, 2 ) :
+				param = math.log (theta_simulation[i] )
+				regularizer += (  param * param )
+			for i in range( 2, len(theta_simulation) ):
+				regularizer += (theta_simulation[i] * theta_simulation[i] )
+		
+		else:
+			raise ValueError('Error: Specify rate_method to be Arrhenius or Metropolis!')
+		LAMBDA =50
+		regularizer = regularizer/ (2 * LAMBDA)
 		lnprob = -(n + 1  )*np.log(sigma) - (error  /( 2 *(sigma ** 2) )) -  regularizer
 	else:
 		lnprob = -error
 	negativelnprob = -lnprob
+	
 	elapsed = timeit.default_timer() - start_time
 	itertime_file.write(str(elapsed) + ",")
 	overalltime_file.write(str(timeit.default_timer() - OVERALL_STARTTIME) + ",")

@@ -1,7 +1,7 @@
 import cPickle as pickle
 import sys
 import os
-sys.path.insert(0,os.path.realpath('../reactions'))
+sys.path.insert(0,os.path.realpath('reactions'))
 import parent
 from parent import *
 

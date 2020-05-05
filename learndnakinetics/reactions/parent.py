@@ -15,7 +15,7 @@ from multistrand.options import Options, Literals
 from multistrand.builder import Builder, BuilderRate ,  transitiontype,  localtype ,  hybridizationString, dissociationString, threewaybmString
 from multistrand.concurrent import  FirstStepRate, FirstPassageRate, Bootstrap, MergeSim
 from multistrand.system import SimSystem
-from pathways import  PathwayHelix, PathwayHairpin ,  PathwayThreewayStrandDisplacement , PathwayBubbleClosing
+from pathways import  PathwayHelix, PathwayHairpin ,  PathwayThreewayStrandDisplacement
 from multistrand.objects import  StopCondition
 from subprocess import Popen, PIPE, call
 
@@ -132,13 +132,9 @@ class ParentComplex(object):
 			pathway = PathwayHairpin( True , self.strands_list , self.reaction_type, self.dataset_name, self.dataset_type ,cutoff =dataset.cutoff)
 		elif self.reaction_type == myenums.ReactionType.HAIRPINOPENING.value :
 			pathway = PathwayHairpin( False , self.strands_list , self.reaction_type, self.dataset_name, self.dataset_type , cutoff =dataset.cutoff)
-		elif  self.reaction_type == myenums.ReactionType.FOURWAYBRANCHMIGRATION.value :
-			pathway = PathwayFourwayStrandExchange (  self.strands_list , self.reaction_type, self.dataset_name, self.dataset_type , lenx = dataset.lenx, lenm= dataset.lenm, lenn = dataset.lenn , ms = dataset.ms , ns = dataset.ns , loopbases= dataset.loopbases )
 		elif  self.reaction_type == myenums.ReactionType.THREEWAYDISPLACEMENT.value :
 			pathway= PathwayThreewayStrandDisplacement(  self.strands_list , self.reaction_type, self.dataset_name, self.dataset_type,  toehold_length = dataset.toehold_length , cutoff = dataset.cutoff )
-		elif self.reaction_type == myenums.ReactionType.BUBBLECLOSING.value :
-			pathway = PathwayBubbleClosing(  self.strands_list , self.reaction_type, self.dataset_name, self.dataset_type  , dataset.flur_position, cutoff =dataset.cutoff)
-	
+		
 		self.startStates = pathway.get_pathway()
 		self.uniqueIDtoLength, self.auto_strand_id_list = pathway.get_uniqueIDtoLengthandOrder()
 		self.boltzmann_sample_initialstates_list= pathway.boltzmann_sample_initialstates(self.pathwayelaboration_N)
@@ -574,14 +570,8 @@ class ParentComplex(object):
 		with open(uniqueidtowrite+"_statespacesize.txt", 'w') as p:
 			p.write( str(self.statespacesize) )
 	
-		#print "----------------------------------------------------- " , self.multistrand_simulation_time, self.loading_protospace_time,self.loading_prototransitions_time,  self.loading_protoinitialstates_time,  self.loading_protofinalstates_time
-		#tb =  self.multistrand_simulation_time + self.loading_protospace_time+  self.loading_prototransitions_time +   self.loading_protoinitialstates_time + self.loading_protofinalstates_time
-		#print "----------------------------------------------------- " , self.build_time, tb , "             diff: ", self.build_time - tb
-		#print "+++++++++++++++++++++++++++++++++++++++++++++++++++++ " , self.multistrand_simulation_fatten_time, self.loading_protospace_fatten_time,self.loading_prototransitions_fatten_time,  self.loading_protoinitialstates_fatten_time,  self.loading_protofinalstates_fatten_time
-		#tb =  self.multistrand_simulation_fatten_time +self.loading_protospace_fatten_time + self.loading_prototransitions_fatten_time +   self.loading_protoinitialstates_fatten_time + self.loading_protofinalstates_fatten_time
-		#print "+++++++++++++++++++++++++++++++++++++++++++++++++++++ " , self.fatten_time, tb ,  "             diff: ", self.fatten_time - tb
 		
-		print  "Error: " + str(error) +  "         real_log_10_rate: "  +str (real_log_10_rate)  +  "         predicted_log_10_rate: "  +str (predicted_log_10_rate)  + "\n\n\n"
+		print  "Squared Error:" + str(error) +  "         real_log_10_rate: "  +str (real_log_10_rate)  +  "         predicted_log_10_rate: "  +str (predicted_log_10_rate)  + "\n\n\n"
 		attributes_file.write(  "Error: " + str(error) +  "         real_log_10_rate: "  +str (real_log_10_rate)  +  "         predicted_log_10_rate: "  +str (predicted_log_10_rate)  + "\n" )
 		attributes_file.write("Next iteration "+"\n")
 		attributes_file.close()

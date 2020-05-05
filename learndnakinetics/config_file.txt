@@ -1,8 +1,8 @@
 [learndnakinetics]
-n_processors=4
-#n_processors is the number of processors for learndnakinetics.py (consequently for samplemcmc.py)
 use_multiprocess = 1
 #if use_multiprocess == 1 use multiprocess , if =0 don't use multiprocessing.
+n_processors=4
+#n_processors is the number of processors for learndnakinetics.py (consequently for samplemcmc.py)
 rate_method = 1
 #rate_method   metropolis = 1 ,     kawasaki = 2 ,     arrhenius = 3,  Options are available in Options.Literals
 parameter_folder  = test

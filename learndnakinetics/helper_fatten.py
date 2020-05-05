@@ -1,8 +1,7 @@
 import sys
 import cPickle as pickle
 import os
-import gc
-sys.path.insert(0,os.path.realpath('../reactions'))
+sys.path.insert(0,os.path.realpath('reactions'))
 
 from multistrand.builder import Builder
 import parent
