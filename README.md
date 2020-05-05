@@ -83,7 +83,7 @@ To use pathway elaboration with the dataset provided:
    - Set the initial parameter set. 
  - Run  ' learndnakinetics/map.py '. 
  
-  If you have successfully installaled this software,  you will get a message such as "Starting to estimate parameters for the Arrhenius kinetic model". 
+  If you have successfully installaled this software,  you will get a message "Using pathway elaboration to predict the kinetics of nucleic acid kinetics ... ". 
 
 # References 
 
