@@ -587,7 +587,7 @@ class Builder(object):
                 pathwaystates.append(initialstate)
                 listofinitialstates.append(initialstate)
         
-        #pathwaystates.append(finalstate)  #do not remove, vagarna ageh ba in searche add she, IDsh fargh mikone
+        #pathwaystates.append(finalstate)  #do not remove
         mykey = ""
         for p1 in range(len( finalstate  )) :
             mykey = mykey +"-" +finalstate[ p1 ].sequence +"-"+ finalstate[ p1 ].structure + "-"
