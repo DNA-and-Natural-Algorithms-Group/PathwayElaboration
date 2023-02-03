@@ -10,7 +10,8 @@ Please contact us at nasimzf@cs.ubc.ca for questions regarding the software.
 
 Disclaimer: This software is free for use only for research purposes. If you make use of this software, please cite our paper
 
-[1]  Sedigheh Zolaktaf*, Frits Dannenberg*, Mark Schmidt, Anne Condon, and Erik Winfree, The Pathway Elaboration Method for Mean First Passage Time Estimation in Large Continuous-Time Markov Chains with Applications to Nucleic Acid Kinetics, under review.
+[1]  Sedigheh Zolaktaf*, Frits Dannenberg*, Mark Schmidt, Anne Condon, and Erik Winfree, PPREDICTING DNA KINETICS WITH A TRUNCATED CONTINUOUS-TIME
+MARKOV CHAIN METHOD, under review.
 
 # Requirements 
 
